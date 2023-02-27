@@ -32,9 +32,9 @@
         <div class="box">
             <input type="text" v-model="word">
             <p :class="color" v-if="word.length == 0"> Пустое поле </p>
-            <p v-else-if="word > 0 && word <= 20">Ваше число: {{word}} </p> 
-            <p v-else-if="word > 20">Вы ввели число больше 20 </p> 
-            <p v-else="word ==  ">Введите число</p>
+            <p :class="color" v-else-if="word > 0 && word <= 20">Ваше число: {{word}} </p> 
+            <p :class="color" v-else-if="word > 20">Вы ввели число больше 20 </p> 
+            <p :class="color" v-else="word ==  ">Введите число</p>
         </div>
     </div>
 </div>
