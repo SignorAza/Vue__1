@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div class="container">
+    <h1>ДЗ</h1>
+
+    <div id="app">
+
+        <div class="center">
+
+        <div class="box">
+            <button @click="color = 'green' ">Зеленый</button>
+        </div>
+
+        <div class="box">
+            <button @click="color = 'red' ">Красный</button>
+        </div>
+
+        <div class="box boxm">
+            <button @click="color = 'yellow' ">Желтый</button>
+        </div>
+
+
+        <div class="box">
+            <input type="text" v-model="word">
+            <p :class="color" v-if="word.length == 0"> Пустое поле </p>
+            <p v-else-if="word > 0 && word <= 20">Ваше число: {{word}} </p> 
+            <p v-else-if="word > 20">Вы ввели число больше 20 </p> 
+            <p v-else="word ==  ">Введите число</p>
+        </div>
+    </div>
+</div>
+</div>
+    <script src="main.js"></script>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+        <button @click="count--">-</button>
+        <h1 :class="color">{{ count }}</h1>
+        <button @click="addCount">+</button>
+        <div class="box">
+            <input :type="view ? 'text' : 'password' ">
+            <button @click="view = !view">
+                {{ view ? 'Скрыть' : 'Показать' }}
+            </button>
+        </div>
+        <div class="box">
+            <input type="text" v-model="text">
+            <p>Ваше имя: {{ text }}</p>
+        </div>
+        <div class="box">
+            <input type="text" v-model="word">
+            <p v-if="word.length == 0">Ваше поле пустое</p>
+            <p v-else-if="word.length > 0 && word.length < 5">В вашем поле есть что то</p>
+            <p v-else>Вы ввели очень много слов</p>
+        </div>
+        <div class="box">
+            <h2 v-if="view">Text</h2>
+            <h2 v-show="view">Text</h2>
+            <button @click="view = !view">click</button>
+        </div>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html> -->
